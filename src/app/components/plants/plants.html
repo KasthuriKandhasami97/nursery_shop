@@ -1,0 +1,82 @@
+
+
+<div class="container mt-4">
+
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Search Plants..."
+    [(ngModel)]="searchText"
+    (input)="searchPlant()">
+
+  <select
+    class="form-select mb-4"
+    (change)="filterCategory($event)">
+
+    <option value="">All Plants</option>
+    <option value="Indoor">Indoor</option>
+    <option value="Flower">Flower</option>
+
+  </select>
+
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let plant of filteredPlants">
+
+      <div class="card h-100">
+
+        <img
+          [src]="plant.image"
+          class="card-img-top">
+
+        <div class="card-body">
+
+          <h5>{{ plant.name }}</h5>
+
+          <p>₹{{ plant.price }}</p>
+
+          <div class="d-flex gap-2 mt-2">
+
+  <button
+    class="btn btn-success btn-sm flex-fill"
+    (click)="addToCart(plant)">
+
+    Add To Cart
+
+  </button>
+
+  <a
+    class="btn btn-primary btn-sm flex-fill"
+    [routerLink]="['/plants', plant.id]">
+
+    View Details
+
+  </a>
+
+</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div
+  class="alert alert-warning text-center"
+  *ngIf="filteredPlants.length === 0">
+
+  No plants found for "{{searchText}}" 🌱
+  <br><br>
+    <button
+    class="btn btn-secondary"
+    (click)="searchText=''; selectedCategory=''; applyFilters()">
+
+    Clear Filters
+
+  </button>
+
+</div>
+
+</div>

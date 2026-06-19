@@ -1,0 +1,154 @@
+<div class="container mt-5">
+
+  <div class="row">
+
+    <div class="col-md-7">
+
+      <div class="card shadow">
+
+        <div class="card-body">
+
+          <h3 class="mb-4">
+
+            Checkout Details
+
+          </h3>
+
+          <div class="mb-3">
+
+            <label class="form-label">
+
+              Full Name
+
+            </label>
+
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="name">
+
+          </div>
+
+          <div class="mb-3">
+
+            <label class="form-label">
+
+              Phone Number
+
+            </label>
+
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="phone">
+
+          </div>
+
+          <div class="mb-3">
+
+            <label class="form-label">
+
+              Delivery Address
+
+            </label>
+
+            <textarea
+              rows="4"
+              class="form-control"
+              [(ngModel)]="address">
+            </textarea>
+
+          </div>
+
+          <button
+            class="btn btn-success w-100"
+            (click)="placeOrder()">
+
+            Place Order
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+      <div class="card shadow">
+
+        <div class="card-body">
+
+          <h4>
+
+            Order Summary
+
+          </h4>
+
+          <hr>
+
+          <div
+            *ngFor="
+            let item of cartItems">
+
+            <p>
+
+              {{item.name}}
+
+              x
+
+              {{item.quantity}}
+
+              =
+
+              ₹{{item.price *
+              item.quantity}}
+
+            </p>
+
+          </div>
+
+          <hr>
+
+          <h5
+            class="text-success">
+
+            Total:
+
+            ₹{{getTotal()}}
+
+          </h5>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="container mt-5">
+
+  <div class="mb-3">
+
+    <a
+      routerLink="/cart"
+      class="btn btn-outline-secondary">
+
+      ← Back To Cart
+
+    </a>
+
+  </div>
+
+  <div class="row">
+
+    <!-- Checkout Form -->
+
+    <!-- Order Summary -->
+
+  </div>
+
+</div>
+
+  </div>
+
+</div>

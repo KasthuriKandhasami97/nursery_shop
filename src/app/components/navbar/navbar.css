@@ -1,0 +1,26 @@
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: 0.3s ease;
+  background: transparent;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar.scrolled {
+  background: #198754; /* green theme */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

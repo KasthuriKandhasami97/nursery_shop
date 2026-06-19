@@ -1,0 +1,227 @@
+<section class="hero" data-aos="fade-in">
+
+  <img
+    src="assets/images/banner.jpg"
+    class="hero-image"
+    alt="Nursery Banner">
+
+  <div class="hero-content text-center text-white">
+
+    <h1>Bring Nature Home 🌱</h1>
+
+    <p>
+      Discover beautiful indoor and outdoor plants
+      for your home and office.
+    </p>
+
+    <a
+      routerLink="/plants"
+      class="btn btn-success btn-lg">
+
+      Shop Plants
+
+    </a>
+
+  </div>
+
+</section>
+<div class="container py-5">
+
+  <h2 class="text-center mb-5">
+    Why Choose Us?
+  </h2>
+
+  <div class="row text-center">
+
+    <div class="col-md-4">
+      <h1>🌿</h1>
+      <h5>Fresh Plants</h5>
+      <p>Healthy and premium quality plants.</p>
+    </div>
+
+    <div class="col-md-4">
+      <h1>🚚</h1>
+      <h5>Fast Delivery</h5>
+      <p>Quick delivery across your city.</p>
+    </div>
+
+    <div class="col-md-4">
+      <h1>💚</h1>
+      <h5>Affordable Price</h5>
+      <p>Best prices with quality assurance.</p>
+    </div>
+
+  </div>
+
+</div>
+<section class="bg-light py-5">
+
+  <div class="container">
+
+    <h2 class="text-center mb-4">
+      Most Popular Plants 🌿
+    </h2>
+
+    <div class="row">
+
+      <div
+        class="col-md-3 mb-4" data-aos="zoom-in"
+        *ngFor="let plant of plants | slice:0:visiblePlants">
+
+        <div class="card h-100 shadow">
+
+          <img
+            [src]="plant.image"
+            class="plant-img"
+            alt="{{plant.name}}">
+
+          <div class="card-body text-center">
+
+            <h5>{{ plant.name }}</h5>
+
+            <p>₹{{ plant.price }}</p>
+
+            <a
+              routerLink="/plants"
+              class="btn btn-success btn-sm">
+
+              View
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+<section class="bg-success text-white py-5">
+
+  <div class="container">
+
+    <div class="row text-center">
+
+      <div class="col-md-3">
+        <h2>500+</h2>
+        <p>Plants Sold</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2>100+</h2>
+        <p>Plant Varieties</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2>1000+</h2>
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2>4.9★</h2>
+        <p>Customer Rating</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<div class="container py-5">
+
+  <h2 class="text-center mb-4">
+
+    Customer Reviews
+
+  </h2>
+
+<div class="row">
+
+  <div class="col-md-4 mb-3">
+
+    <div class="card">
+
+      <div class="card-body">
+
+        ⭐⭐⭐⭐⭐
+
+        <p>
+          Beautiful plants and fast delivery.
+        </p>
+
+        <strong>- Priya</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-4 mb-3">
+
+    <div class="card" data-aos="flip-left">
+
+      <div class="card-body">
+
+        ⭐⭐⭐⭐⭐
+
+        <p>
+          Healthy plants and great packaging.
+        </p>
+
+        <strong>- Rahul</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-4 mb-3">
+
+    <div class="card">
+
+      <div class="card-body">
+
+        ⭐⭐⭐⭐⭐
+
+        <p>
+          Excellent customer service.
+        </p>
+
+        <strong>- Anitha</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+<section
+  class="bg-dark text-white text-center py-5">
+
+  <h2>
+    Ready To Transform Your Space?
+  </h2>
+
+  <p>
+    Explore our collection of plants today.
+  </p>
+
+  <a
+    routerLink="/plants"
+    class="btn btn-success">
+
+    Shop Now
+
+  </a>
+
+</section>

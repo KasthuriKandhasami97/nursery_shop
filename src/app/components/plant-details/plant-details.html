@@ -1,0 +1,43 @@
+<div class="container mt-5" *ngIf="plant">
+
+  <button
+    class="btn btn-secondary mb-3"
+    (click)="goBack()">
+
+    ← Back
+
+  </button>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <img
+        [src]="plant.image"
+        class="img-fluid rounded">
+    </div>
+
+    <div class="col-md-6">
+
+      <h2>{{ plant.name }}</h2>
+
+      <h4 class="text-success">
+        ₹{{ plant.price }}
+      </h4>
+
+      <p>{{ plant.description }}</p>
+
+      <button
+        class="btn btn-success me-2"
+        (click)="addToCart(plant)">
+
+        Add To Cart
+
+      </button>
+
+
+
+    </div>
+
+  </div>
+
+</div>
