@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "dist/nursery-shop/browser",
   "rewrites": [
     {
       "source": "/(.*)",
