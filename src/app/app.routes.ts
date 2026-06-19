@@ -31,5 +31,6 @@ path:'plants/:id', component:PlantDetails
   {
     path:'login',
     component:Login
-  }
+  },
+  { path: '**', redirectTo: '' }
 ];
