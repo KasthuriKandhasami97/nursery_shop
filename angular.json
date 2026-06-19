@@ -20,6 +20,9 @@
             "outputPath": "dist/nursery-shop/browser",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+  "aos"
+],
             "assets": [
               "src/assets",
               {
