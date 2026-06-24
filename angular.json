@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/nursery-shop/browser",
+            "outputPath": "dist/nursery-shop",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "allowedCommonJsDependencies": [
